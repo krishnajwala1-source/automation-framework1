@@ -19,4 +19,4 @@ jobs:
           java-version: '17'
 
       - name: Run API Tests
-        run: mvn clean test -DsuiteXmlFile=testng-api.xml
+       run: mvn clean test -Dsurefire.suiteXmlFiles=testng-api.xml
