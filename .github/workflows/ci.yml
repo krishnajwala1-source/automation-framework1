@@ -19,4 +19,4 @@ jobs:
           java-version: '17'
 
       - name: Build & Run Tests
-        run: mvn clean test
+        run: run: mvn clean test -DsuiteXmlFile=testng-api.xml
