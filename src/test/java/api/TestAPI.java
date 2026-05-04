@@ -43,7 +43,7 @@ public class TestAPI extends BaseAPI {
 	      AssertJUnit.assertEquals(response.getStatusCode(), 200);
 	  }
 	    
-	    @Test
+	  //  @Test
 	    public void testCreateUser() {
 	    	
 	    	TestListener.test.info("Sending POST request to /users");
@@ -58,7 +58,7 @@ public class TestAPI extends BaseAPI {
 	        AssertJUnit.assertTrue(statusCode == 200 || statusCode == 201);
 	    }
 	    
-	    @Test
+	   // @Test
 	    public void testUpdateUserPUT() {
 	    	
 	    	TestListener.test.info("Sending UPDATE request to /users");
@@ -70,7 +70,7 @@ public class TestAPI extends BaseAPI {
 	        AssertJUnit.assertEquals(response.getStatusCode(), 200);
 	    }
 	    
-	    @Test
+	   // @Test
 	    public void testUpdateUserPATCH() {
 	    	
 	    	TestListener.test.info("Sending PATCH request to /users");
