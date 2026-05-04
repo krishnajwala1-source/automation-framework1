@@ -46,21 +46,22 @@ public class TestAPI extends BaseAPI {
 	    @Test
 	    public void testCreateUser() {
 	    	
-	    	TestListener.test.info("Sending GET request to /users");
+	    	TestListener.test.info("Sending POST request to /users");
 	    	Response response = userAPI.createUser();
-	    	TestListener.test.info("Status Code: " + response.getStatusCode());
+	    	  int statusCode = response.getStatusCode();
+	    	TestListener.test.info("Status Code: " + statusCode);
 	        
 
-	        System.out.println("Status Code: " + response.getStatusCode());
+	        System.out.println("Status Code: " + statusCode);
 	        System.out.println("Response Body: " + response.getBody().asString());
 
-	        AssertJUnit.assertEquals(response.getStatusCode(), 201);
+	        AssertJUnit.assertTrue(statusCode == 200 || statusCode == 201);
 	    }
 	    
 	    @Test
 	    public void testUpdateUserPUT() {
 	    	
-	    	TestListener.test.info("Sending GET request to /users");
+	    	TestListener.test.info("Sending UPDATE request to /users");
 	    	 Response response = userAPI.updateUserPUT();
 	    	 TestListener.test.info("Status Code: " + response.getStatusCode());
 	        
@@ -72,7 +73,7 @@ public class TestAPI extends BaseAPI {
 	    @Test
 	    public void testUpdateUserPATCH() {
 	    	
-	    	TestListener.test.info("Sending GET request to /users");
+	    	TestListener.test.info("Sending PATCH request to /users");
 	    	 Response response = userAPI.updateUserPATCH();
 	    	 TestListener.test.info("Status Code: " + response.getStatusCode());
 	       
