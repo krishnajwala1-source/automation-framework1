@@ -1,0 +1,19 @@
+<suite name="UI Suite" parallel="tests" thread-count="2">
+
+    <listeners>
+        <listener class-name="utils.TestListener"/>
+    </listeners>
+
+    <test name="Search Test 1">
+        <classes>
+            <class name="test.searchPage_Test"/>
+        </classes>
+    </test>
+
+    <test name="Search Test 2">
+        <classes>
+            <class name="test.searchPage_Test"/>
+        </classes>
+    </test>
+
+</suite>
