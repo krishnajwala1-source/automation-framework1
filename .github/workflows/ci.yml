@@ -19,4 +19,4 @@ jobs:
           java-version: '17'
 
       - name: Run Only API Test Class
-        run: mvn clean install -DskipTests
+        run: mvn -Dtest=TestAPI#testGetUsers test

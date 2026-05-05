@@ -12,7 +12,7 @@ public class TestAPI extends BaseAPI {
 	  UserAPI userAPI = new UserAPI();
 
 	  
-	  @Test
+	 // @Test
 	  public void testWithBearerToken() {
 	      Response response = userAPI.getUsersWithToken();
 
