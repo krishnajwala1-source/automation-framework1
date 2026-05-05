@@ -7,7 +7,18 @@ import io.restassured.response.Response;
 public class UserAPI {
 	
 	
-	public Response getUsersWithToken() {
+	
+	public Response getUsers() {
+	    return given()
+	            .when()
+	            .get("/users");
+	}
+}
+
+
+	
+	
+	/*public Response getUsersWithToken() {
 	    return given()
 	            .header("Authorization", "Bearer dummy_token_123")
 	            .when()
@@ -50,5 +61,5 @@ public class UserAPI {
 		                .patch("/users/2");
 		    }
 	}
-
+*/
 
